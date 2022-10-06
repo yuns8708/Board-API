@@ -17,6 +17,9 @@ public class BoardListResponseDto {
     // 작성자명
     private String username;
 
+    private LocalDateTime createdAt;
+
+    private LocalDateTime modifiedAt;
 
 
 
@@ -24,10 +27,14 @@ public class BoardListResponseDto {
     public BoardListResponseDto (Board board) {
         this.title = board.getTitle();
         this.username = board.getUsername();
+        this.createdAt = board.getModifiedAt();
+        this.modifiedAt = board.getCreatedAt();
     }
 
     public BoardListResponseDto(Optional<Board> board) {
         this.title = board.get().getTitle();
         this.username = board.get().getUsername();
+        this.createdAt = board.get().getModifiedAt();
+        this.modifiedAt = board.get().getCreatedAt();
     }
 }
