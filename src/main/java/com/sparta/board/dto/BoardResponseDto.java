@@ -32,12 +32,4 @@ public class BoardResponseDto {
         this.createdAt = board.getModifiedAt();
         this.modifiedAt = board.getCreatedAt();
     }
-
-    public BoardResponseDto(Optional<Board> board) {
-        this.title = board.get().getTitle();
-        this.username = board.get().getUsername();
-        this.content = board.get().getContent();
-        this.createdAt = board.get().getModifiedAt();
-        this.modifiedAt = board.get().getCreatedAt();
-    }
 }

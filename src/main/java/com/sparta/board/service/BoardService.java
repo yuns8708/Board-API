@@ -30,7 +30,6 @@ public class BoardService {
     // 전체 글 조회
     @Transactional
     public List<BoardListResponseDto> readAll() {
-//        List<BoardListResponseDto> boardList = boardRepository.findAllByOrderByModifiedAtDesc();
         return boardRepository.findAllByOrderByModifiedAtDesc();
     }
 
@@ -38,7 +37,9 @@ public class BoardService {
     @Transactional
     public BoardResponseDto readOne(Long id) {
         // 조회한 id로 게시판 가져오기
-        Optional<Board> board =  boardRepository.findById(id);
+        Board board =  boardRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("조회 실패")
+        );
         return new BoardResponseDto(board);
     }
 
