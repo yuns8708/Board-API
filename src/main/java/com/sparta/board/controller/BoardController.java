@@ -1,7 +1,5 @@
 package com.sparta.board.controller;
 
-import com.sparta.board.domain.Board;
-import com.sparta.board.domain.BoardRepository;
 import com.sparta.board.dto.BoardListResponseDto;
 import com.sparta.board.dto.BoardRequestDto;
 import com.sparta.board.dto.BoardResponseDto;

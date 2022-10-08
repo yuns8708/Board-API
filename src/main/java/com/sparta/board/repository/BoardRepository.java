@@ -1,5 +1,6 @@
-package com.sparta.board.domain;
+package com.sparta.board.repository;
 
+import com.sparta.board.domain.Board;
 import com.sparta.board.dto.BoardListResponseDto;
 import com.sparta.board.dto.BoardRequestDto;
 import com.sparta.board.dto.BoardResponseDto;

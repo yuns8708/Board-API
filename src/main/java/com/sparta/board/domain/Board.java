@@ -34,6 +34,10 @@ public class Board extends Timestamped {
     @Column(nullable = false)
     private String password;
 
+    // 게시글 여러 개를 회원 1명이 가질 수 있음
+//    @ManyToOne
+//    private Member member;
+
     public Board(BoardRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.username = requestDto.getUsername();

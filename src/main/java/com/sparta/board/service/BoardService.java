@@ -1,7 +1,7 @@
 package com.sparta.board.service;
 
 import com.sparta.board.domain.Board;
-import com.sparta.board.domain.BoardRepository;
+import com.sparta.board.repository.BoardRepository;
 import com.sparta.board.dto.BoardListResponseDto;
 import com.sparta.board.dto.BoardRequestDto;
 import com.sparta.board.dto.BoardResponseDto;
@@ -9,9 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
